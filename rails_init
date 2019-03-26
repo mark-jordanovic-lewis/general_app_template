@@ -1,0 +1,85 @@
+#!/bin/bash
+
+app_name=$1
+
+echo  ====================
+echo  GENERATING RAILS APP
+echo  ====================
+# - api based app
+# - use fave DB
+# - no need for any JS or management
+# - no static/dyanmic pages => no links
+# - git in containing dir to show build files and test
+# - injecting Gemfile from templates so also no bundle
+# - who needs tests anyway ... ?
+echo
+rails new $app_name \
+          --api \
+          --database=postgresql \
+          --skip-coffee \
+          --skip-javascript \
+          --skip-yarn \
+          --skip-turbolinks \
+          --skip-git\
+          --skip-gemfile \
+          --skip-bundle \
+          --skip-test
+echo  ===========================
+echo  ADDING GEMFILE AND BUNDLING
+echo  ===========================
+# - copy gemfile template
+# - bundle
+# - angular build script
+# - build db and generate user model
+# - copy templated user model and routes
+echo
+cp templates/Gemfile $app_name
+( cd $app_name && bundle )
+( cd $app_name && \
+    bundle exec rails db:create && \
+    bundle exec rails g devise:install && \
+    bundle exec rails g devise_token_auth:install User auth && \
+    bundle exec rails g rspec:install) # ... we need tests that's who!
+echo  =============================
+echo  INSERTING INITIAL RAILS SETUP
+echo  =============================
+# Adding the templated files to rails to skip some manual work
+echo
+( cd templates && ruby insert_defaults $app_name )
+rm $app_name/db/migrate/*_create_users.rb
+cp -rf templates/rails/* $app_name/
+( cd $app_name && bundle exec rails db:migrate db:seed )
+
+echo  ======================
+echo  GENERATING ANGULAR APP
+echo  ======================
+# - git in containing dir
+# - use sass for styling because functions and nests
+# - routing means url updates with certain DOM updates
+echo
+ng new $app_name-frontend \
+       --skip-git \
+       --style sass \
+       --routing
+echo  =========================
+echo  ADDING ANGULAR BUILD STEP
+echo  =========================
+# - optimize and ahead of time compile
+# sadly the optimize and aot options don't let one build to external folders or rename index.html
+echo
+mkdir $app_name/app/assets
+echo '#! /bin/bash' > $app_name-frontend/build_app
+echo "ng build --optimization --aot" >> $app_name-frontend/build_app
+chmod +x $app_name-frontend/build_app
+echo ============================
+echo INSERTING ANGULAR TOKEN AUTH
+echo ============================
+echo
+cp -rf templates/angular/* $app_name-frontend/
+( cd $app_name-frontend && npm i angular-in-memory-web-api)
+( cd $app_name-frontend && npm install )
+echo  ====================
+echo  BUILDING ANGULAR APP
+echo  ====================
+echo
+( cd "$app_name-frontend" && ./build_app )

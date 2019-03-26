@@ -1,0 +1,26 @@
+APPNAME = ARGV[0]
+
+
+# ======================= #
+# App specific user state #
+# ======================= #
+USERDETAILS = [
+  "enum kind: %i[admin customer business]"
+]
+File.open("./rails/app/models/user.rb", 'w') do |f|
+  f.write File.read('./user.rb').gsub('USERDETAILS', USERDETAILS.join("\n"))
+end
+
+# ================== #
+# nginx server setup #
+# ================== #
+appdir = `pwd`.chomp.split('/')[0..-2].join('/')
+File.open('../config/nginx.conf', 'w') do |f|
+  f.write File.read('./nginx.conf')
+              .gsub('WHICHPASSENGER', `which passenger`.chomp)
+              .gsub('WHICHRUBY', `which ruby`.chomp)
+              .gsub('RAILSAPPROOT', "#{appdir}/#{APPNAME}/")
+              .gsub('APPBUILDLOCATION', "#{appdir}/#{APPNAME}-frontend/dist/#{APPNAME}-frontend/")
+              .gsub('LOGLOCATION', "#{appdir}/config/log")
+              .gsub('ERRLOCATION', "#{appdir}/config")
+end

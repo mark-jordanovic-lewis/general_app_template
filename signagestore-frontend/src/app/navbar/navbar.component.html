@@ -1,0 +1,33 @@
+<nav>
+  <a routerLink="/arrivals" class="nav-title">{{navTitle}}</a>
+  <div class="navigation">
+    <input/> <!-- this is a search box -->
+    <div class="login">
+      <button class="login-button" (click)=toggleLoginDialogue()><span class="logo"> Login ヽ(￣～￣　)ノ</span></button>
+
+      <user-create *ngIf="signingUp" (endSignUp)="toggleSignUp()"></user-create>
+
+      <div *ngIf="loggingIn && !user.authenticated" class="login-box">
+        <div class="login-box__message">
+          Hey there,<br>why not login?
+        </div>
+        <div class="login-box__inputs">
+          <input [(ngModel)]="user.email" placeholder="email"/>
+          <input [(ngModel)]="user.password" placeholder="password"/>
+          <button (click)="login($event)">Login</button>
+        </div>
+        <button (click)="toggleSignUp(true)">Sign Up!??</button>
+      </div>
+
+      <div *ngIf="loggingIn && user.authenticated" class="login-box">
+        <div class="login-box__message">
+          <a routerLink="profile">{{ user.name }} Profile</a>
+        </div>
+        <div class="login-box__inputs">
+          <button (click)="logout($event)">Logout</button>
+        </div>
+      </div>
+    </div>
+    <span class="option-button">=</span> <!-- the three line option button. Add img attribute in component -->
+  </div>
+</nav>

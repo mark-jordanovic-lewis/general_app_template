@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# run nginx
+# =========
+
+# EDIT THIS LINE IF YOU INSTALLED PASSENGER NGINX TO A DIFFERENT PLACE THAN ON YOUR PATH
+# ( cd config && nginx -c $(pwd)/config/nginx.conf )
+# this is where mine is
+case "$1" in
+  "start" | "run" )
+    /opt/nginx_passenger/sbin/nginx -c $(pwd)/config/nginx.conf
+    echo starting nginx, angular and rails
+    echo Server Listening on port 80
+    ;;
+  "stop" )
+    sudo /opt/nginx_passenger/sbin/nginx -c $(pwd)/config/nginx.conf -s stop
+    echo stopped nginx, angular and rails
+    ;;
+  * )
+    ;;
+esac
+
+# should probably build the angular site here but not right now.

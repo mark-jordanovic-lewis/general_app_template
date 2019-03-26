@@ -1,0 +1,30 @@
+<div class="user-create__background full-screen"></div>
+<div class="user-create__modal-container full-screen">
+  <div class="user-create__modal">
+    <div class="user-create__modal--box">
+      <div class="user-create__modal-header">So you wish to join us?</div>
+      <div class="user-create__modal-body">
+        <div>
+          <label for="email">Email</label>
+          <input id="email" name="email" [(ngModel)]="user.email" />
+        </div>
+        <div>
+          <label for="password">Password</label>
+          <input id="password" name="password" [(ngModel)]="user.password" />
+        </div>
+        <div>
+          <label for="password_confirmation">Confirm</label>
+          <input id="password_confirmation" name="password_confirmation" [(ngModel)]="user.password_confirmation" />
+        </div>
+        <div>
+          <label for="business">business</label><button class="radio" [ngClass]="{selected: businessUser}" (click)="setKind('business')"></button>
+          <label for="customer">customer</label><button class="radio" [ngClass]="{selected: !businessUser}" (click)="setKind('customer')"></button>
+        </div>
+      </div>
+      <div>
+        <button (click)="exitModal()">I will not!</button>
+        <button (click)="create()">Let the machine know</button>
+      </div>
+    </div>
+  </div>
+</div>

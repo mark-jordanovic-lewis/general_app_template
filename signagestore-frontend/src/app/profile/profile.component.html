@@ -1,0 +1,29 @@
+<div class="profile-page">
+  <div class="profile-table">
+    <div class="tabs">
+      <div class="tab" (click)="setContent('user')">USER</div>
+      <div class="tab" (click)="setContent('transactions')">TRANSACTIONS</div>
+      <div class="tab" (click)="setContent('carts')">CARTS</div>
+      <span *ngIf="user.kind == 'business'" >
+        <div (click)="setContent('products')">PRODUCTS</div>
+        <div (click)="setContent('shop')">SHOP</div>
+      </span>
+    </div>
+    <div class="content" [ngSwitch]="content">
+      <div *ngSwitchCase="'user'">
+        <!-- todo: make editable -->
+        <h2>User Details</h2>
+        <p>name: {{ user.name }} </p>
+        <p>email: {{ user.email }} </p>
+        <p>authenticated: {{ user.authenticated }} </p>
+        <p>kind: {{ user.kind }} </p>
+      </div>
+      <div *ngSwitchCase="'transactions'">Transaction Details</div>
+      <div *ngSwitchCase="'carts'">Cart Details</div>
+      <span *ngIf="user.kind == 'business'">
+        <div *ngSwitchCase="'products'">Product Details</div>
+        <div *ngSwitchCase="'shop'">Shop</div>
+      </span>
+    </div>
+  </div>
+</div>

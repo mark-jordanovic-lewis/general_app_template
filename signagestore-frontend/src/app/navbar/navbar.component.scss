@@ -1,0 +1,87 @@
+nav {
+  // flex setup
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  // size and colour
+  height: 2em;
+  width: 100%;
+  background-color: rgb(4, 23, 7);
+  // font settings
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 2em;
+  color: rgb(168, 151, 133);
+}
+.nav-title {
+  align-self: left;
+  margin: 0.2em;
+  margin-left: 0.7em;
+  color: rgb(168, 151, 133);
+  text-decoration: none;
+}
+.navigation {
+  display: flex;
+  flex-direction: row;
+  align-self: right;
+  margin: 0.2em;
+  margin-right: 0.7em;
+}
+.login-button {
+  background-color: rgb(172, 104, 2);
+  color: #ffffff;
+  border-style: solid;
+  border-radius: 7px;
+  border-color: rgb(172, 104, 2);
+  border-width: 5px;
+  margin-left: 0.3em;
+}
+.option-button {
+  margin-left: 0.3em;
+}
+.logo {
+  animation: colorchange 10s infinite;
+  -webkit-animation: colorchange 10s infinite;
+  font-family: otsutome;
+  align-self: top;
+  font-size: 0.8em;
+}
+@keyframes colorchange
+{
+  0%   {color: rgb(144, 208, 7);}
+  50%  {color: rgb(17, 172, 33);}
+  100%   {color: rgb(144, 208, 7);}
+}
+@-webkit-keyframes colorchange
+{
+  0%   {color: rgb(144, 208, 7);}
+  50%  {color: rgb(17, 172, 33);}
+  100%   {color: rgb(144, 208, 7);}
+}
+.login-box {
+  background-color: darkgrey;
+  position: absolute;
+  top: auto;
+  left: auto;
+  margin-top: 15px;
+  margin-left: -45px;
+  display: flex;
+  flex-direction: column;
+  .login-box__message {
+    color: white;
+  }
+  .login-box__inputs {
+    display: inherit;
+    flex-direction: column;
+    margin: 3px;
+    border: 1 dashed grey;
+    border-radius: 5px;
+    input {
+      height: 1.2em;
+      border-radius: 4px;
+      margin: 3px;
+    }
+  }
+}
