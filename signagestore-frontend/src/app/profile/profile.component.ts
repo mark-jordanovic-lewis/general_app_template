@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MessageService } from '../message.service';
-import { UserShareService } from '../user-share.service';
+import { UserService } from '../user.service';
 import { UserState } from '../user';
 
 @Component({
@@ -14,7 +14,7 @@ export class ProfileComponent implements OnInit {
 
   constructor(
     private messageService: MessageService,
-    private sharedUser: UserShareService
+    private sharedUser: UserService
   ) { this.sharedUser.user.subscribe(user => this.user = user); }
 
   setContent(content: string): void {

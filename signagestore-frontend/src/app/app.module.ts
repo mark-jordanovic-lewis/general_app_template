@@ -12,8 +12,8 @@ import { CommunicationsComponent } from './communications/communications.compone
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 
-import { UserShareService } from './user-share.service';
-import { LandingPageComponent } from './landing-page/landing-page.component';
+import { UserService } from './user.service';
+import { HttpServiceService } from './http-service.service';
 import { UserCreateComponent } from './user-create/user-create.component';
 import { ProfileComponent } from './profile/profile.component';
 
@@ -22,7 +22,6 @@ import { ProfileComponent } from './profile/profile.component';
     AppComponent,
     NavbarComponent,
     CommunicationsComponent,
-    LandingPageComponent,
     UserCreateComponent,
     ProfileComponent
   ],
@@ -35,7 +34,7 @@ import { ProfileComponent } from './profile/profile.component';
   ],
   providers: [
     Angular2TokenService,
-    UserShareService
+    UserService
   ],
   bootstrap: [AppComponent]
 })

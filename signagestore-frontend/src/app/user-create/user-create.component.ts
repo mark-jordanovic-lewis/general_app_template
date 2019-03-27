@@ -2,7 +2,6 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 import { MessageService } from '../message.service';
 import { UserService } from '../user.service';
-import { UserShareService } from '../user-share.service';
 import { UserState } from '../user';
 
 @Component({
@@ -17,22 +16,13 @@ export class UserCreateComponent implements OnInit {
 
   constructor(
     private messageService: MessageService,
-    private creationService: UserService,
-    private sharedUser: UserShareService
-  ) { this.sharedUser.user.subscribe(user => this.user = user); }
+    private userService: UserService
+  ) { this.userService.user.subscribe(user => this.user = user); }
 
   create(): void {
-    this.creationService
-        .create(this.user)
-        .subscribe(
-          success => {
-            this.log(`UserCreate success: ${success.message}`);
-            success.user.authenticated = true;
-            this.sharedUser.updateState(success.user);
-            this.exitModal();
-          },
-          error => this.log(`UserCreate failed: ${error.message}`)
-        )
+    if (this.userService.create(this.user)) {
+      this.exitModal();
+    }
   }
 
   setKind(kind: string) {

@@ -4,12 +4,12 @@ APPNAME = ARGV[0]
 # ======================= #
 # App specific user state #
 # ======================= #
-USERDETAILS = [
-  "enum kind: %i[admin customer business]"
-]
-File.open("./rails/app/models/user.rb", 'w') do |f|
-  f.write File.read('./user.rb').gsub('USERDETAILS', USERDETAILS.join("\n"))
-end
+#USERDETAILS = [
+#  "enum kind: %i[admin customer business]"
+#]
+#File.open("./rails/app/models/user.rb", 'w') do |f|
+#  f.write File.read('./user.rb').gsub('USERDETAILS', USERDETAILS.join("\n"))
+#end
 
 # ================== #
 # nginx server setup #

@@ -5160,3 +5160,295 @@ Processing by Api::ProductsController#index as HTML
 Completed 200 OK in 10ms (Views: 0.4ms | ActiveRecord: 3.2ms)
 
 
+Started POST "/api/user/create" for 127.0.0.1 at 2019-03-27 00:16:21 +0000
+  
+PG::ConnectionBad (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+  
+pg (1.1.4) lib/pg.rb:56:in `initialize'
+pg (1.1.4) lib/pg.rb:56:in `new'
+pg (1.1.4) lib/pg.rb:56:in `connect'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:692:in `connect'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:811:in `new_connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:855:in `checkout_new_connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:834:in `try_to_checkout_new_connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:795:in `acquire_connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:523:in `checkout'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:1010:in `retrieve_connection'
+activerecord (5.2.2.1) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.2.1) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.2.1) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.2.1) lib/rails/engine.rb:524:in `call'
+passenger (6.0.2) src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:97:in `process_request'
+passenger (6.0.2) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:157:in `accept_and_process_next_request'
+passenger (6.0.2) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:110:in `main_loop'
+passenger (6.0.2) src/ruby_supportlib/phusion_passenger/request_handler.rb:415:in `block (3 levels) in start_threads'
+passenger (6.0.2) src/ruby_supportlib/phusion_passenger/utils.rb:113:in `block in create_thread_and_abort_on_exception'
+Started POST "/api/user/create" for ::1 at 2019-03-27 00:20:57 +0000
+  
+PG::ConnectionBad (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+  
+pg (1.1.4) lib/pg.rb:56:in `initialize'
+pg (1.1.4) lib/pg.rb:56:in `new'
+pg (1.1.4) lib/pg.rb:56:in `connect'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:692:in `connect'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:811:in `new_connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:855:in `checkout_new_connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:834:in `try_to_checkout_new_connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:795:in `acquire_connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:523:in `checkout'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:1010:in `retrieve_connection'
+activerecord (5.2.2.1) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.2.1) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.2.1) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/api/user/create" for 127.0.0.1 at 2019-03-27 00:33:09 +0000
+  [1m[35m (68.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/morb/.asdf/installs/ruby/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+Processing by Api::UsersController#create as HTML
+  Parameters: {"user"=>{"email"=>"adfjh@asdgf.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Exists (58.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "adfjh@asdgf.com"], ["provider", "email"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "adfjh@asdgf.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Create (67.0ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "email", "tokens", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["uid", "adfjh@asdgf.com"], ["encrypted_password", "$2a$11$cAAbfqi0h2xzfMfIDzf3vufivqHJhW5DArxoCf4ZPr0XCDLB5LnS2"], ["email", "adfjh@asdgf.com"], ["tokens", "{}"], ["created_at", "2019-03-27 00:33:09.624509"], ["updated_at", "2019-03-27 00:33:09.624509"]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (32.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:5
+Completed 201 Created in 301ms (Views: 1.0ms | ActiveRecord: 179.0ms)
+
+
+Started POST "/api/user/create" for 127.0.0.1 at 2019-03-27 01:44:46 +0000
+Processing by Api::UsersController#create as HTML
+  Parameters: {"email"=>"dgzsg@gasdg.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"email"=>"dgzsg@gasdg.com"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Exists (1.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "dgzsg@gasdg.com"], ["provider", "email"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dgzsg@gasdg.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:5
+Completed 422 Unprocessable Entity in 12ms (Views: 0.2ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/api/user/create" for 127.0.0.1 at 2019-03-27 01:48:36 +0000
+Processing by Api::UsersController#create as HTML
+  Parameters: {"email"=>"dgzsg@gasdg.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"email"=>"dgzsg@gasdg.com"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "dgzsg@gasdg.com"], ["provider", "email"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dgzsg@gasdg.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:5
+Completed 422 Unprocessable Entity in 5ms (Views: 0.2ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/api/user/create" for 127.0.0.1 at 2019-03-27 01:48:58 +0000
+Processing by Api::UsersController#create as HTML
+  Parameters: {"email"=>"wafsd@:gdsaf.dvs", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"email"=>"wafsd@:gdsaf.dvs"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "wafsd@:gdsaf.dvs"], ["provider", "email"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "wafsd@:gdsaf.dvs"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:5
+Completed 422 Unprocessable Entity in 6ms (Views: 0.2ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/api/user/create" for 127.0.0.1 at 2019-03-27 01:50:21 +0000
+Processing by Api::UsersController#create as HTML
+  Parameters: {"email"=>"wafsd@gdsaf.dvs", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"email"=>"wafsd@gdsaf.dvs"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "wafsd@gdsaf.dvs"], ["provider", "email"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "wafsd@gdsaf.dvs"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:5
+Completed 422 Unprocessable Entity in 5ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/user/create" for 127.0.0.1 at 2019-03-27 01:50:55 +0000
+Processing by Api::UsersController#create as HTML
+  Parameters: {"email"=>"fsda@uyto.dvs", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"email"=>"fsda@uyto.dvs"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "fsda@uyto.dvs"], ["provider", "email"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "fsda@uyto.dvs"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:5
+Completed 422 Unprocessable Entity in 5ms (Views: 0.2ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/auth/sign_in" for 127.0.0.1 at 2019-03-27 01:51:07 +0000
+Processing by DeviseTokenAuth::SessionsController#create as JSON
+  Parameters: {"session"=>{}}
+Unpermitted parameter: :session
+Completed 401 Unauthorized in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/auth/sign_in" for 127.0.0.1 at 2019-03-27 01:52:15 +0000
+Processing by DeviseTokenAuth::SessionsController#create as JSON
+  Parameters: {"session"=>{}}
+Unpermitted parameter: :session
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/auth/sign_in" for 127.0.0.1 at 2019-03-27 01:53:40 +0000
+Processing by DeviseTokenAuth::SessionsController#create as JSON
+  Parameters: {"email"=>"a@b.com", "password"=>"[FILTERED]", "session"=>{"email"=>"a@b.com", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "a@b.com"], ["provider", "email"], ["LIMIT", 1]]
+  ↳ /home/morb/.asdf/installs/ruby/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/morb/.asdf/installs/ruby/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "a@b.com"], ["id", 1], ["LIMIT", 1]]
+  ↳ /home/morb/.asdf/installs/ruby/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (86.0ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "{\"Tyz7-2si_ZHoSOPaEFIPJw\":{\"token\":\"$2a$10$wLuARm0zVT4rvtIWdWrOruWg1N/P2PBZA7I9Waxm5clzpL.E/AW8.\",\"expiry\":1554755777,\"last_token\":\"$2a$10$chw0nYDPG1gwTpdGmSRJnepJMqfXbWMC0LhY4WM5tH47FybRx5A22\",\"updated_at\":\"2019-03-25T20:36:17.552Z\"},\"LhWOzUMxVnezoTgy69mXRQ\":{\"token\":\"$2a$10$CqcsdtZJwy7BbipFOPeyN.JLUo2OnhsCtjWxJdzFMUN9ysl1BdJ.G\",\"expiry\":1554755816,\"last_token\":\"$2a$10$yEpdqg5fuHdRAADuOC0A7e.7zp/htfoQDtHMEIsU6s.oE5QCLAl2e\",\"updated_at\":\"2019-03-25T20:36:56.392Z\"},\"GARpXbIZhE4h-7e-aotMZw\":{\"token\":\"$2a$10$.VajW0z3pXpU6RKI7ogRceqM.E0csGPnRjBatXftlIptxYp9pA9pi\",\"expiry\":1554761394,\"last_token\":\"$2a$10$w9f.hAx/lRsu88gyJxzx7eEiEF1DzJwLZXMI03OwZCAcBJ2C3mfle\",\"updated_at\":\"2019-03-25T22:09:54.299Z\"},\"iBZoRdeV-jV4pq3qFb2fnA\":{\"token\":\"$2a$10$kozf41p/wAyaHOBVtpy91eE.15Zl9VUgSl/LmEpWhbvA9i6oqtati\",\"expiry\":1554861220}}"], ["updated_at", "2019-03-27 01:53:40.612371"], ["id", 1]]
+  ↳ /home/morb/.asdf/installs/ruby/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (27.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/morb/.asdf/installs/ruby/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/morb/.asdf/installs/ruby/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "a@b.com"], ["id", 1], ["LIMIT", 1]]
+  ↳ /home/morb/.asdf/installs/ruby/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/morb/.asdf/installs/ruby/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.3ms)[0m  [1m[37mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2 FOR UPDATE[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/morb/.asdf/installs/ruby/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "a@b.com"], ["id", 1], ["LIMIT", 1]]
+  ↳ /home/morb/.asdf/installs/ruby/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "{\"Tyz7-2si_ZHoSOPaEFIPJw\":{\"token\":\"$2a$10$wLuARm0zVT4rvtIWdWrOruWg1N/P2PBZA7I9Waxm5clzpL.E/AW8.\",\"expiry\":1554755777,\"last_token\":\"$2a$10$chw0nYDPG1gwTpdGmSRJnepJMqfXbWMC0LhY4WM5tH47FybRx5A22\",\"updated_at\":\"2019-03-25T20:36:17.552Z\"},\"LhWOzUMxVnezoTgy69mXRQ\":{\"token\":\"$2a$10$CqcsdtZJwy7BbipFOPeyN.JLUo2OnhsCtjWxJdzFMUN9ysl1BdJ.G\",\"expiry\":1554755816,\"last_token\":\"$2a$10$yEpdqg5fuHdRAADuOC0A7e.7zp/htfoQDtHMEIsU6s.oE5QCLAl2e\",\"updated_at\":\"2019-03-25T20:36:56.392Z\"},\"GARpXbIZhE4h-7e-aotMZw\":{\"token\":\"$2a$10$.VajW0z3pXpU6RKI7ogRceqM.E0csGPnRjBatXftlIptxYp9pA9pi\",\"expiry\":1554761394,\"last_token\":\"$2a$10$w9f.hAx/lRsu88gyJxzx7eEiEF1DzJwLZXMI03OwZCAcBJ2C3mfle\",\"updated_at\":\"2019-03-25T22:09:54.299Z\"},\"iBZoRdeV-jV4pq3qFb2fnA\":{\"token\":\"$2a$10$E68gADIFD06rO9XLy0qLX.HbfF5LLNOtukMj3RaADHW4PO72qol1e\",\"expiry\":1554861220,\"last_token\":\"$2a$10$kozf41p/wAyaHOBVtpy91eE.15Zl9VUgSl/LmEpWhbvA9i6oqtati\",\"updated_at\":\"2019-03-27T01:53:40.732Z\"}}"], ["updated_at", "2019-03-27 01:53:40.828743"], ["id", 1]]
+  ↳ /home/morb/.asdf/installs/ruby/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (4.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/morb/.asdf/installs/ruby/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 402ms (Views: 0.2ms | ActiveRecord: 126.4ms)
+
+
+Started GET "/auth/validate_token" for 127.0.0.1 at 2019-03-27 01:54:59 +0000
+Processing by DeviseTokenAuth::TokenValidationsController#validate_token as JSON
+  Parameters: {"token_validation"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "a@b.com"], ["LIMIT", 1]]
+  ↳ /home/morb/.asdf/installs/ruby/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/morb/.asdf/installs/ruby/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "a@b.com"], ["id", 1], ["LIMIT", 1]]
+  ↳ /home/morb/.asdf/installs/ruby/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/morb/.asdf/installs/ruby/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.5ms)[0m  [1m[37mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2 FOR UPDATE[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/morb/.asdf/installs/ruby/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "a@b.com"], ["id", 1], ["LIMIT", 1]]
+  ↳ /home/morb/.asdf/installs/ruby/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "{\"Tyz7-2si_ZHoSOPaEFIPJw\":{\"token\":\"$2a$10$wLuARm0zVT4rvtIWdWrOruWg1N/P2PBZA7I9Waxm5clzpL.E/AW8.\",\"expiry\":1554755777,\"last_token\":\"$2a$10$chw0nYDPG1gwTpdGmSRJnepJMqfXbWMC0LhY4WM5tH47FybRx5A22\",\"updated_at\":\"2019-03-25T20:36:17.552Z\"},\"LhWOzUMxVnezoTgy69mXRQ\":{\"token\":\"$2a$10$CqcsdtZJwy7BbipFOPeyN.JLUo2OnhsCtjWxJdzFMUN9ysl1BdJ.G\",\"expiry\":1554755816,\"last_token\":\"$2a$10$yEpdqg5fuHdRAADuOC0A7e.7zp/htfoQDtHMEIsU6s.oE5QCLAl2e\",\"updated_at\":\"2019-03-25T20:36:56.392Z\"},\"GARpXbIZhE4h-7e-aotMZw\":{\"token\":\"$2a$10$.VajW0z3pXpU6RKI7ogRceqM.E0csGPnRjBatXftlIptxYp9pA9pi\",\"expiry\":1554761394,\"last_token\":\"$2a$10$w9f.hAx/lRsu88gyJxzx7eEiEF1DzJwLZXMI03OwZCAcBJ2C3mfle\",\"updated_at\":\"2019-03-25T22:09:54.299Z\"},\"iBZoRdeV-jV4pq3qFb2fnA\":{\"token\":\"$2a$10$SRLfxyR7dO9/A2B78EJck.3fe.51pYDo3tNxjB0uFxgEs.kcqQrgC\",\"expiry\":1554861300,\"last_token\":\"$2a$10$E68gADIFD06rO9XLy0qLX.HbfF5LLNOtukMj3RaADHW4PO72qol1e\",\"updated_at\":\"2019-03-27T01:55:00.050Z\"}}"], ["updated_at", "2019-03-27 01:55:00.113335"], ["id", 1]]
+  ↳ /home/morb/.asdf/installs/ruby/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (67.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/morb/.asdf/installs/ruby/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 201ms (Views: 0.2ms | ActiveRecord: 70.3ms)
+
+
+Started POST "/auth/sign_in" for 127.0.0.1 at 2019-03-27 01:55:12 +0000
+Processing by DeviseTokenAuth::SessionsController#create as JSON
+  Parameters: {"email"=>"a@b.com", "password"=>"[FILTERED]", "session"=>{"email"=>"a@b.com", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "a@b.com"], ["provider", "email"], ["LIMIT", 1]]
+  ↳ /home/morb/.asdf/installs/ruby/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/morb/.asdf/installs/ruby/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "a@b.com"], ["id", 1], ["LIMIT", 1]]
+  ↳ /home/morb/.asdf/installs/ruby/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "{\"Tyz7-2si_ZHoSOPaEFIPJw\":{\"token\":\"$2a$10$wLuARm0zVT4rvtIWdWrOruWg1N/P2PBZA7I9Waxm5clzpL.E/AW8.\",\"expiry\":1554755777,\"last_token\":\"$2a$10$chw0nYDPG1gwTpdGmSRJnepJMqfXbWMC0LhY4WM5tH47FybRx5A22\",\"updated_at\":\"2019-03-25T20:36:17.552Z\"},\"LhWOzUMxVnezoTgy69mXRQ\":{\"token\":\"$2a$10$CqcsdtZJwy7BbipFOPeyN.JLUo2OnhsCtjWxJdzFMUN9ysl1BdJ.G\",\"expiry\":1554755816,\"last_token\":\"$2a$10$yEpdqg5fuHdRAADuOC0A7e.7zp/htfoQDtHMEIsU6s.oE5QCLAl2e\",\"updated_at\":\"2019-03-25T20:36:56.392Z\"},\"GARpXbIZhE4h-7e-aotMZw\":{\"token\":\"$2a$10$.VajW0z3pXpU6RKI7ogRceqM.E0csGPnRjBatXftlIptxYp9pA9pi\",\"expiry\":1554761394,\"last_token\":\"$2a$10$w9f.hAx/lRsu88gyJxzx7eEiEF1DzJwLZXMI03OwZCAcBJ2C3mfle\",\"updated_at\":\"2019-03-25T22:09:54.299Z\"},\"iBZoRdeV-jV4pq3qFb2fnA\":{\"token\":\"$2a$10$SRLfxyR7dO9/A2B78EJck.3fe.51pYDo3tNxjB0uFxgEs.kcqQrgC\",\"expiry\":1554861300,\"last_token\":\"$2a$10$E68gADIFD06rO9XLy0qLX.HbfF5LLNOtukMj3RaADHW4PO72qol1e\",\"updated_at\":\"2019-03-27T01:55:00.050Z\"},\"-N39gWWtIwYSU6X1EaHgaQ\":{\"token\":\"$2a$10$AufKD2v5GhqGUU75wIq8lOR9Ge0OuYPteh3qsKq5fIWCAjqB8NXHy\",\"expiry\":1554861312}}"], ["updated_at", "2019-03-27 01:55:12.665129"], ["id", 1]]
+  ↳ /home/morb/.asdf/installs/ruby/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (19.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/morb/.asdf/installs/ruby/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/morb/.asdf/installs/ruby/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "a@b.com"], ["id", 1], ["LIMIT", 1]]
+  ↳ /home/morb/.asdf/installs/ruby/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/morb/.asdf/installs/ruby/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.3ms)[0m  [1m[37mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2 FOR UPDATE[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/morb/.asdf/installs/ruby/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "a@b.com"], ["id", 1], ["LIMIT", 1]]
+  ↳ /home/morb/.asdf/installs/ruby/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "{\"Tyz7-2si_ZHoSOPaEFIPJw\":{\"token\":\"$2a$10$wLuARm0zVT4rvtIWdWrOruWg1N/P2PBZA7I9Waxm5clzpL.E/AW8.\",\"expiry\":1554755777,\"last_token\":\"$2a$10$chw0nYDPG1gwTpdGmSRJnepJMqfXbWMC0LhY4WM5tH47FybRx5A22\",\"updated_at\":\"2019-03-25T20:36:17.552Z\"},\"LhWOzUMxVnezoTgy69mXRQ\":{\"token\":\"$2a$10$CqcsdtZJwy7BbipFOPeyN.JLUo2OnhsCtjWxJdzFMUN9ysl1BdJ.G\",\"expiry\":1554755816,\"last_token\":\"$2a$10$yEpdqg5fuHdRAADuOC0A7e.7zp/htfoQDtHMEIsU6s.oE5QCLAl2e\",\"updated_at\":\"2019-03-25T20:36:56.392Z\"},\"GARpXbIZhE4h-7e-aotMZw\":{\"token\":\"$2a$10$.VajW0z3pXpU6RKI7ogRceqM.E0csGPnRjBatXftlIptxYp9pA9pi\",\"expiry\":1554761394,\"last_token\":\"$2a$10$w9f.hAx/lRsu88gyJxzx7eEiEF1DzJwLZXMI03OwZCAcBJ2C3mfle\",\"updated_at\":\"2019-03-25T22:09:54.299Z\"},\"iBZoRdeV-jV4pq3qFb2fnA\":{\"token\":\"$2a$10$SRLfxyR7dO9/A2B78EJck.3fe.51pYDo3tNxjB0uFxgEs.kcqQrgC\",\"expiry\":1554861300,\"last_token\":\"$2a$10$E68gADIFD06rO9XLy0qLX.HbfF5LLNOtukMj3RaADHW4PO72qol1e\",\"updated_at\":\"2019-03-27T01:55:00.050Z\"},\"-N39gWWtIwYSU6X1EaHgaQ\":{\"token\":\"$2a$10$F1aPJoN9bIPVAhmKwKg5O.C4jJjKr0QiNEUMnZGcuIWR6AE8Kk/Ve\",\"expiry\":1554861312,\"last_token\":\"$2a$10$AufKD2v5GhqGUU75wIq8lOR9Ge0OuYPteh3qsKq5fIWCAjqB8NXHy\",\"updated_at\":\"2019-03-27T01:55:12.690Z\"}}"], ["updated_at", "2019-03-27 01:55:12.745410"], ["id", 1]]
+  ↳ /home/morb/.asdf/installs/ruby/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/morb/.asdf/installs/ruby/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 266ms (Views: 0.2ms | ActiveRecord: 28.4ms)
+
+

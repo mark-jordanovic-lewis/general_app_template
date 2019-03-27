@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-import { Observable, of } from 'rxjs';
+import { Observable, of, BehaviorSubject } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 import { MessageService } from './message.service';
 
+import { HttpServiceService } from './http-service.service';
 import { UserState } from './user';
 
 const httpOptions = {
@@ -15,30 +16,64 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class UserService {
+  // TODO: ON UPDATE APPLY HEADERS
+  public user: BehaviorSubject<UserState> = new BehaviorSubject<UserState>(new UserState());
+  private _user: UserState;
   createUrl: string = '/api/user/create';
 
   constructor(
-    private http: HttpClient,
+    private http: HttpServiceService,
     private messageService: MessageService
-  ) { this.log('UserService up.'); }
+  ) { this.user.subscribe(user => this._user = user); }
 
-  create(user: UserState): Observable<any> {
-    return this.http
-               .post<any>(this.createUrl, { user: user }, httpOptions)
-               .pipe(
-                 tap(response => this.log(response.message)),
-                 catchError(this.handleError<any>('ProductService#product')));
+  create(user: UserState): boolean {
+    if (this._user.authenticated) { return false }
+    this.http.post(this.createUrl, user)
+      .subscribe(
+        success => {
+          this.log(`UserCreate success: ${success.message}`);
+          success.user.authenticated = true;
+          this.update(success.user);
+        },
+          error => this.log(`UserCreate failed: ${error.message}`)
+        );
+    return this._user.authenticated; // this does not mean we have their headers!, also race condition
   }
 
-  private handleError<T> (operation = 'operation', result?: T) {
-    return (error: any): Observable<T> => {
-      console.error(error);
-      this.log(`${operation} failed: ${error.message}`);
-      return of(result as T);
-    };
+  login(user: UserState): boolean {
+    var login_json = { email: user.email, password: user.password };
+    this.http.login(login_json)
+      .subscribe(
+        success => {
+          this._user.authenticated = true;
+          this.update(this._user);
+          this.log("Access Granted");
+          console.log('response: ', success);
+        },
+        err => {
+          this.update(new UserState);
+          this.log("Access Denied");
+          console.error('auth error:', err);
+        }
+      )
+    return this._user.authenticated;
+  }
+
+  logout(): void {
+    this.http.logout()
+      .subscribe(
+        res => { this.log("Successful Logout"); },
+        err => { this.log("Logged out with errors"); },
+      )
+    this.update(new UserState());
+  }
+
+  private update(state: UserState): void {
+    this.log(`UserShareService#update: ${state.email}, auth'd: ${state.authenticated}`)
+    this.user.next(state);
   }
 
   private log(message: string) {
-    this.messageService.add(`Navbar(Auth)Component: ${message}`);
+    this.messageService.add(`UserService: ${message}`);
   }
 }

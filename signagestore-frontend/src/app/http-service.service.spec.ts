@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { UserShareService } from './user-share.service';
+import { HttpServiceService } from './http-service.service';
 
-describe('UserShareService', () => {
+describe('HttpServiceService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: UserShareService = TestBed.get(UserShareService);
+    const service: HttpServiceService = TestBed.get(HttpServiceService);
     expect(service).toBeTruthy();
   });
 });
