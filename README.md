@@ -1,5 +1,5 @@
-# SinageStore
-Developed for a code test interview stage
+# To Be Continued....
+Developed for a code test interview stage - 
 ## Pre-requisites
 - ruby - I'm on 2.6.1 but nothing magic is going on
 - rails - whichever ruby gems happen to be using right now...
@@ -11,9 +11,14 @@ Developed for a code test interview stage
     $ passenger-install-nginx-module
   ```
   then add the new executable path to the `engine` script.
+- more automation req'd definitely
 
+## Disclaimer
+If you can get this working then good job because I have missed a _bunch_ of stuff out here.
+This is a pet project for building whatever backends for an angular2+ frontend.
 
 ## Build Instructions
+
 #### The overall app (top level dir)
 - in `config/nginx.conf` the `passenger_root` needs to be the exact executable for passenger, not a shim.
 - don't run `rails_init`, it builds an nginx, angular, rails app with devise_token_auth to start from scratch
