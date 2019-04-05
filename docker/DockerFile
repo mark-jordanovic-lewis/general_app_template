@@ -1,0 +1,62 @@
+FROM 1and1internet/ubuntu-16-nginx-passenger
+MAINTAINER mark.4ndrew.lewis@gmail.com
+ARG DEBIAN_FRONTEND=noninteractive
+
+
+ENV GEM_HOME=/var/www/._gems
+
+ENV GEM_PATH=$GEM_HOME \
+    PATH=${GEM_HOME}/bin:$PATH
+
+
+
+# keys for node npm n all that jazz
+RUN \
+  gpg --keyserver hkp://pool.sks-keyservers.net \
+      --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+
+# Get Ruby 2.6.1 and Rails 5 Deps
+RUN \
+  curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash - &&\
+  curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add - &&\
+  echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list &&\
+  sudo apt-get update &&\
+  sudo apt-get install -y gnupg \
+                          git-core \
+                          curl \
+                          zlib1g-dev \
+                          build-essential \
+                          libssl-dev \
+                          libreadline-dev \
+                          libyaml-dev \
+                          libgdbm-dev \
+                          libncurses5-dev \
+                          automake \
+                          libtool \
+                          bison \
+                          postgresql \
+                          libxml2-dev \
+                          libxslt1-dev \
+                          libcurl4-openssl-dev \
+                          software-properties-common \
+                          libffi-dev \
+                          nodejs \
+                          yarn \
+# link node
+RUN \
+	ln -sf /usr/bin/nodejs /usr/local/bin/node
+
+# install Ruby 2.6.1
+RUN \
+curl -sSL https://get.rvm.io | bash -s stable \
+source ~/.rvm/scripts/rvm \
+rvm install 2.6.1 \
+rvm use 2.6.1 --default \
+ruby -v
+
+# install passenger nginx and clean up
+RUN \
+	sed -i -e "s | passenger_app_type wsgi | passenger_ruby $(which ruby) |" /etc/nginx/sites-enabled/default && \
+	/usr/bin/passenger-config validate-install  --auto --no-colors && \
+	apt-get -y clean && \
+	rm -rf /var/lib/apt/lists/*
